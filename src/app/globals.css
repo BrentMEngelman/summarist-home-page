@@ -1,0 +1,21 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-dark: #032b41;
+  --color-brand-primary: #2bd97c;
+  --color-brand-primary-hover: #20ba68;
+  --color-brand-text: #394547;
+  --color-brand-muted: #6b757b;
+  --color-brand-blue-light: #d7e9ff;
+  --color-brand-blue-accent: #0365f2;
+  --color-brand-yellow: #fff3d7;
+  --color-brand-gray-light: #f1f6f4;
+}
+
+@layer base {
+  body {
+    max-width: 100%;
+    overflow-x: hidden;
+    font-family: "Roboto", sans-serif;
+  }
+}
