@@ -42,27 +42,40 @@ export default function BookDetailsPage() {
     }
     fetchBook();
   }, [id]);
+const handleProtectedAction = (actionType: "read" | "listen" | "save") => {
+  console.log("Current User:", user);
+  console.log("Current Book:", book);
 
-  const handleProtectedAction = (actionType: "read" | "listen" | "save") => {
-    if (!user) {
-      dispatch(setAuthModalOpen(true));
-      return;
-    }
+  // 1. Auth check
+  if (!user) {
+    console.log("User not logged in - opening Auth Modal");
+    dispatch(setAuthModalOpen(true));
+    return;
+  }
 
-    if (actionType === "save") {
-      setIsSaved(!isSaved);
-      return;
-    }
+  // 2. Save action
+  if (actionType === "save") {
+    setIsSaved(!isSaved);
+    return;
+  }
 
-    // If it's a premium book and user is not subscribed, redirect to choose-plan
-    if (book?.subscriptionRequired && !isSubscribed) {
-      router.push("/choose-plan");
-      return;
-    }
+  // 3. Premium subscription check
+  if (book?.subscriptionRequired && !isSubscribed) {
+    console.log("Premium book & user unsubscribed - navigating to /choose-plan");
+    router.push("/choose-plan");
+    return;
+  }
 
-    // Otherwise, redirect to the book player
-    router.push(`/player/${book?.id}`);
-  };
+  // 4. Player navigation
+  if (book?.id) {
+    console.log(`Navigating to /player/${book.id}`);
+    router.push(`/player/${book.id}`);
+  } else {
+    console.error("Book object missing or invalid ID:", book);
+  }
+};
+
+
 
   return (
     <div className="flex min-h-screen bg-white">
@@ -219,7 +232,7 @@ export default function BookDetailsPage() {
               <div className="grid md:grid-cols-2 gap-12">
                 <div className="space-y-4">
                   <h3 className="text-xl font-bold text-brand-dark">
-                    About this book
+                    What's it about?
                   </h3>
                   <p className="text-brand-text leading-relaxed whitespace-pre-line">
                     {book.bookDescription}

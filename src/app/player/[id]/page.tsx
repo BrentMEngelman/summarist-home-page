@@ -88,13 +88,13 @@ export default function BookPlayerPage() {
   return (
     <div className="flex min-h-screen bg-white pb-32">
       {/* Sidebar */}
-      <aside className="w-[200px] border-r border-gray-200 flex flex-col justify-between p-4 min-h-screen fixed top-0 left-0 bg-white z-20 max-md:hidden">
+      <aside className="w-50 border-r border-gray-200 flex flex-col justify-between p-4 min-h-screen fixed top-0 left-0 bg-white z-20 max-md:hidden">
         <div>
           <div className="mb-8 px-2">
             <img
               src="/assets/logo.png"
               alt="Summarist Logo"
-              className="w-[160px]"
+              className="w-40"
             />
           </div>
           <nav className="space-y-2">
@@ -139,7 +139,7 @@ export default function BookPlayerPage() {
       </aside>
 
       {/* Main Reader Content */}
-      <main className="flex-1 md:ml-[200px] max-w-[800px] mx-auto p-6 md:p-12">
+      <main className="flex-1 md:ml-50 max-w-200 mx-auto p-6 md:p-12">
         {loading ? (
           <div className="space-y-6 animate-pulse">
             <div className="h-8 bg-gray-200 rounded w-3/4"></div>
@@ -163,7 +163,7 @@ export default function BookPlayerPage() {
 
       {/* Bottom Audio Player Bar */}
       {book && (
-        <div className="fixed bottom-0 left-0 md:left-[200px] right-0 bg-[#042330] text-white p-4 flex flex-col md:flex-row items-center justify-between shadow-2xl z-30 gap-4">
+        <div className="fixed bottom-0 left-0 md:left-50 right-0 bg-[#042330] text-white p-4 flex flex-col md:flex-row items-center justify-between shadow-2xl z-30 gap-4">
           <div className="flex items-center gap-4 w-full md:w-auto">
             <img
               src={book.imageLink}
