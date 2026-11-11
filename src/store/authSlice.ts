@@ -5,6 +5,7 @@ export interface UserData {
   uid: string;
   email: string | null;
   displayName: string | null;
+  subscriptionStatus?: "basic" | "premium" | "premium-plus";
 }
 
 export interface AuthState {
@@ -32,8 +33,13 @@ export const authSlice = createSlice({
     setViewMode: (state, action: PayloadAction<"LOGIN" | "REGISTER" | "FORGOT">) => {
       state.viewMode = action.payload;
     },
+    setSubscriptionStatus: (state, action: PayloadAction<"basic" | "premium" | "premium-plus">) => {
+      if (state.user) {
+        state.user.subscriptionStatus = action.payload;
+      }
+    },
   },
 });
 
-export const { setUser, setAuthModalOpen, setViewMode } = authSlice.actions;
+export const { setUser, setAuthModalOpen, setViewMode, setSubscriptionStatus } = authSlice.actions;
 export default authSlice.reducer;

@@ -123,14 +123,14 @@ function BookPlayerPage() {
                                                 className: "text-xl"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/player/[id]/page.tsx",
-                                                lineNumber: 105,
+                                                lineNumber: 101,
                                                 columnNumber: 15
                                             }, this),
                                             " For you"
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/app/player/[id]/page.tsx",
-                                        lineNumber: 101,
+                                        lineNumber: 97,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -141,14 +141,14 @@ function BookPlayerPage() {
                                                 className: "text-xl"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/player/[id]/page.tsx",
-                                                lineNumber: 111,
+                                                lineNumber: 107,
                                                 columnNumber: 15
                                             }, this),
                                             " My Library"
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/app/player/[id]/page.tsx",
-                                        lineNumber: 107,
+                                        lineNumber: 103,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -158,14 +158,14 @@ function BookPlayerPage() {
                                                 className: "text-xl"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/player/[id]/page.tsx",
-                                                lineNumber: 114,
+                                                lineNumber: 110,
                                                 columnNumber: 15
                                             }, this),
                                             " Highlights"
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/app/player/[id]/page.tsx",
-                                        lineNumber: 113,
+                                        lineNumber: 109,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -175,20 +175,20 @@ function BookPlayerPage() {
                                                 className: "text-xl"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/player/[id]/page.tsx",
-                                                lineNumber: 117,
+                                                lineNumber: 113,
                                                 columnNumber: 15
                                             }, this),
                                             " Search"
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/app/player/[id]/page.tsx",
-                                        lineNumber: 116,
+                                        lineNumber: 112,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/app/player/[id]/page.tsx",
-                                lineNumber: 100,
+                                lineNumber: 96,
                                 columnNumber: 11
                             }, this)
                         ]
@@ -208,14 +208,14 @@ function BookPlayerPage() {
                                         className: "text-xl"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/player/[id]/page.tsx",
-                                        lineNumber: 127,
+                                        lineNumber: 123,
                                         columnNumber: 13
                                     }, this),
                                     " Settings"
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/app/player/[id]/page.tsx",
-                                lineNumber: 123,
+                                lineNumber: 119,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -225,14 +225,14 @@ function BookPlayerPage() {
                                         className: "text-xl"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/player/[id]/page.tsx",
-                                        lineNumber: 130,
+                                        lineNumber: 126,
                                         columnNumber: 13
                                     }, this),
                                     " Help & Support"
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/app/player/[id]/page.tsx",
-                                lineNumber: 129,
+                                lineNumber: 125,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -243,20 +243,20 @@ function BookPlayerPage() {
                                         className: "text-xl"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/player/[id]/page.tsx",
-                                        lineNumber: 136,
+                                        lineNumber: 132,
                                         columnNumber: 13
                                     }, this),
                                     " Logout"
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/app/player/[id]/page.tsx",
-                                lineNumber: 132,
+                                lineNumber: 128,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/app/player/[id]/page.tsx",
-                        lineNumber: 122,
+                        lineNumber: 118,
                         columnNumber: 9
                     }, this)
                 ]
@@ -274,20 +274,20 @@ function BookPlayerPage() {
                             className: "h-8 bg-gray-200 rounded w-3/4"
                         }, void 0, false, {
                             fileName: "[project]/src/app/player/[id]/page.tsx",
-                            lineNumber: 145,
+                            lineNumber: 141,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                             className: "h-96 bg-gray-200 rounded"
                         }, void 0, false, {
                             fileName: "[project]/src/app/player/[id]/page.tsx",
-                            lineNumber: 146,
+                            lineNumber: 142,
                             columnNumber: 13
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/app/player/[id]/page.tsx",
-                    lineNumber: 144,
+                    lineNumber: 140,
                     columnNumber: 11
                 }, this) : book ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                     className: "space-y-8",
@@ -300,7 +300,7 @@ function BookPlayerPage() {
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/app/player/[id]/page.tsx",
-                            lineNumber: 150,
+                            lineNumber: 146,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -308,25 +308,25 @@ function BookPlayerPage() {
                             children: book.summary
                         }, void 0, false, {
                             fileName: "[project]/src/app/player/[id]/page.tsx",
-                            lineNumber: 153,
+                            lineNumber: 149,
                             columnNumber: 13
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/app/player/[id]/page.tsx",
-                    lineNumber: 149,
+                    lineNumber: 145,
                     columnNumber: 11
                 }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                     className: "text-center py-20 text-brand-muted",
                     children: "Book summary not found."
                 }, void 0, false, {
                     fileName: "[project]/src/app/player/[id]/page.tsx",
-                    lineNumber: 158,
+                    lineNumber: 154,
                     columnNumber: 11
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/app/player/[id]/page.tsx",
-                lineNumber: 142,
+                lineNumber: 138,
                 columnNumber: 7
             }, this),
             book && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -341,7 +341,7 @@ function BookPlayerPage() {
                                 className: "w-12 h-16 object-cover rounded shadow"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/player/[id]/page.tsx",
-                                lineNumber: 168,
+                                lineNumber: 164,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -351,7 +351,7 @@ function BookPlayerPage() {
                                         children: book.title
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/player/[id]/page.tsx",
-                                        lineNumber: 174,
+                                        lineNumber: 170,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -359,19 +359,19 @@ function BookPlayerPage() {
                                         children: book.author
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/player/[id]/page.tsx",
-                                        lineNumber: 175,
+                                        lineNumber: 171,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/app/player/[id]/page.tsx",
-                                lineNumber: 173,
+                                lineNumber: 169,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/app/player/[id]/page.tsx",
-                        lineNumber: 167,
+                        lineNumber: 163,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -385,12 +385,12 @@ function BookPlayerPage() {
                                         className: "text-gray-300 hover:text-white text-lg",
                                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$fi$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["FiRotateCcw"], {}, void 0, false, {
                                             fileName: "[project]/src/app/player/[id]/page.tsx",
-                                            lineNumber: 185,
+                                            lineNumber: 181,
                                             columnNumber: 17
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/player/[id]/page.tsx",
-                                        lineNumber: 181,
+                                        lineNumber: 177,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -400,18 +400,18 @@ function BookPlayerPage() {
                                             className: "text-xl"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/player/[id]/page.tsx",
-                                            lineNumber: 192,
+                                            lineNumber: 188,
                                             columnNumber: 19
                                         }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$fi$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["FiPlay"], {
                                             className: "text-xl ml-0.5"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/player/[id]/page.tsx",
-                                            lineNumber: 194,
+                                            lineNumber: 190,
                                             columnNumber: 19
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/player/[id]/page.tsx",
-                                        lineNumber: 187,
+                                        lineNumber: 183,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -419,18 +419,18 @@ function BookPlayerPage() {
                                         className: "text-gray-300 hover:text-white text-lg",
                                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$fi$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["FiRotateCw"], {}, void 0, false, {
                                             fileName: "[project]/src/app/player/[id]/page.tsx",
-                                            lineNumber: 201,
+                                            lineNumber: 197,
                                             columnNumber: 17
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/player/[id]/page.tsx",
-                                        lineNumber: 197,
+                                        lineNumber: 193,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/app/player/[id]/page.tsx",
-                                lineNumber: 180,
+                                lineNumber: 176,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -440,7 +440,7 @@ function BookPlayerPage() {
                                         children: formatTime(currentTime)
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/player/[id]/page.tsx",
-                                        lineNumber: 206,
+                                        lineNumber: 202,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -452,26 +452,26 @@ function BookPlayerPage() {
                                         className: "w-full accent-white cursor-pointer h-1 bg-gray-600 rounded"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/player/[id]/page.tsx",
-                                        lineNumber: 207,
+                                        lineNumber: 203,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                         children: formatTime(duration)
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/player/[id]/page.tsx",
-                                        lineNumber: 215,
+                                        lineNumber: 211,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/app/player/[id]/page.tsx",
-                                lineNumber: 205,
+                                lineNumber: 201,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/app/player/[id]/page.tsx",
-                        lineNumber: 179,
+                        lineNumber: 175,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("audio", {
@@ -482,20 +482,20 @@ function BookPlayerPage() {
                         onEnded: ()=>setIsPlaying(false)
                     }, void 0, false, {
                         fileName: "[project]/src/app/player/[id]/page.tsx",
-                        lineNumber: 219,
+                        lineNumber: 215,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: "hidden md:block w-[150px]"
                     }, void 0, false, {
                         fileName: "[project]/src/app/player/[id]/page.tsx",
-                        lineNumber: 227,
+                        lineNumber: 223,
                         columnNumber: 11
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/app/player/[id]/page.tsx",
-                lineNumber: 166,
+                lineNumber: 162,
                 columnNumber: 9
             }, this)
         ]
