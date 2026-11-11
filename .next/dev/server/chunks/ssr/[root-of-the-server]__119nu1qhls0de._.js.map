@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 10, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/brent/Desktop/FES-Projects/summarist-home-page/src/app/library/page.tsx"],"sourcesContent":["import React from 'react';\r\n\r\nconst page = () => {\r\n  return (\r\n    <></>\r\n  );\r\n};\r\n\r\nexport default page;"],"names":["page"],"mappings":";;;;;AAAA;;;AAEA,MAAMA,OAAO;IACX,qBACE;;;;;AAEJ;uCAEeA"}}]
+}
