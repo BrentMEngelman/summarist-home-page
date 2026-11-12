@@ -1,7 +1,7 @@
 {
+  "/api/health/route": "app/api/health/route.js",
   "/book/[id]/page": "app/book/[id]/page.js",
   "/for-you/page": "app/for-you/page.js",
   "/library/page": "app/library/page.js",
-  "/page": "app/page.js",
-  "/player/[id]/page": "app/player/[id]/page.js"
+  "/settings/page": "app/settings/page.js"
 }

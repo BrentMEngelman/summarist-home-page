@@ -40,6 +40,8 @@ __turbopack_context__.s([
     ()=>__TURBOPACK__default__export__,
     "setAuthModalOpen",
     ()=>setAuthModalOpen,
+    "setSubscriptionStatus",
+    ()=>setSubscriptionStatus,
     "setUser",
     ()=>setUser,
     "setViewMode",
@@ -64,10 +66,15 @@ const authSlice = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modul
         },
         setViewMode: (state, action)=>{
             state.viewMode = action.payload;
+        },
+        setSubscriptionStatus: (state, action)=>{
+            if (state.user) {
+                state.user.subscriptionStatus = action.payload;
+            }
         }
     }
 });
-const { setUser, setAuthModalOpen, setViewMode } = authSlice.actions;
+const { setUser, setAuthModalOpen, setViewMode, setSubscriptionStatus } = authSlice.actions;
 const __TURBOPACK__default__export__ = authSlice.reducer;
 if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
     __turbopack_context__.k.registerExports(__turbopack_context__.m, globalThis.$RefreshHelpers$);

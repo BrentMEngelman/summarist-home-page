@@ -55,14 +55,16 @@ function AuthModal() {
                 handleSuccessLogin({
                     uid: res.user.uid,
                     email: res.user.email,
-                    displayName: res.user.displayName
+                    displayName: res.user.displayName,
+                    subscriptionStatus: "basic"
                 });
             } else {
                 const res = await (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$firebase$2f$auth$2f$dist$2f$esm$2f$index$2d$Bz2J43nW$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__af__as__signInWithEmailAndPassword$3e$__["signInWithEmailAndPassword"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$firebase$2f$firebase$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$locals$3e$__["auth"], email, password);
                 handleSuccessLogin({
                     uid: res.user.uid,
                     email: res.user.email,
-                    displayName: res.user.displayName
+                    displayName: res.user.displayName,
+                    subscriptionStatus: "basic"
                 });
             }
         } catch (err) {
@@ -76,7 +78,8 @@ function AuthModal() {
             handleSuccessLogin({
                 uid: res.user.uid,
                 email: res.user.email,
-                displayName: res.user.displayName
+                displayName: res.user.displayName,
+                subscriptionStatus: "basic"
             });
         } catch (err) {
             setError(err.message);
@@ -89,7 +92,8 @@ function AuthModal() {
             handleSuccessLogin({
                 uid: res.user.uid,
                 email: "Guest User",
-                displayName: "Guest"
+                displayName: "Guest",
+                subscriptionStatus: "premium-plus"
             });
         } catch (err) {
             setError(err.message);
@@ -132,17 +136,17 @@ function AuthModal() {
                             fill: "currentColor"
                         }, void 0, false, {
                             fileName: "[project]/src/components/AuthModal.tsx",
-                            lineNumber: 101,
+                            lineNumber: 131,
                             columnNumber: 13
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/src/components/AuthModal.tsx",
-                        lineNumber: 100,
+                        lineNumber: 122,
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/src/components/AuthModal.tsx",
-                    lineNumber: 96,
+                    lineNumber: 118,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -158,7 +162,7 @@ function AuthModal() {
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/AuthModal.tsx",
-                                lineNumber: 108,
+                                lineNumber: 141,
                                 columnNumber: 15
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -166,7 +170,7 @@ function AuthModal() {
                                 children: "You are logged in."
                             }, void 0, false, {
                                 fileName: "[project]/src/components/AuthModal.tsx",
-                                lineNumber: 111,
+                                lineNumber: 144,
                                 columnNumber: 15
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -175,13 +179,13 @@ function AuthModal() {
                                 children: "Logout"
                             }, void 0, false, {
                                 fileName: "[project]/src/components/AuthModal.tsx",
-                                lineNumber: 112,
+                                lineNumber: 145,
                                 columnNumber: 15
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/AuthModal.tsx",
-                        lineNumber: 107,
+                        lineNumber: 140,
                         columnNumber: 13
                     }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Fragment"], {
                         children: [
@@ -194,7 +198,7 @@ function AuthModal() {
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/AuthModal.tsx",
-                                lineNumber: 121,
+                                lineNumber: 154,
                                 columnNumber: 15
                             }, this),
                             error && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -202,16 +206,16 @@ function AuthModal() {
                                 children: error
                             }, void 0, false, {
                                 fileName: "[project]/src/components/AuthModal.tsx",
-                                lineNumber: 127,
-                                columnNumber: 25
+                                lineNumber: 161,
+                                columnNumber: 17
                             }, this),
                             message && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                 className: "bg-green-100 text-green-600 p-3 rounded mb-4 text-sm",
                                 children: message
                             }, void 0, false, {
                                 fileName: "[project]/src/components/AuthModal.tsx",
-                                lineNumber: 128,
-                                columnNumber: 27
+                                lineNumber: 166,
+                                columnNumber: 17
                             }, this),
                             viewMode !== "FORGOT" && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Fragment"], {
                                 children: [
@@ -223,25 +227,25 @@ function AuthModal() {
                                                 className: "google__icon--mask guest__icon--mask flex items-center",
                                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["FaUser"], {}, void 0, false, {
                                                     fileName: "[project]/src/components/AuthModal.tsx",
-                                                    lineNumber: 137,
+                                                    lineNumber: 178,
                                                     columnNumber: 23
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/AuthModal.tsx",
-                                                lineNumber: 136,
+                                                lineNumber: 177,
                                                 columnNumber: 21
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                 children: "Login as a Guest"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/AuthModal.tsx",
-                                                lineNumber: 139,
+                                                lineNumber: 180,
                                                 columnNumber: 21
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/components/AuthModal.tsx",
-                                        lineNumber: 132,
+                                        lineNumber: 173,
                                         columnNumber: 19
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -251,12 +255,12 @@ function AuthModal() {
                                             children: "or"
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/AuthModal.tsx",
-                                            lineNumber: 143,
+                                            lineNumber: 184,
                                             columnNumber: 21
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/AuthModal.tsx",
-                                        lineNumber: 142,
+                                        lineNumber: 183,
                                         columnNumber: 19
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -277,30 +281,30 @@ function AuthModal() {
                                                         d: "M224 256c70.7 0 128-57.3 128-128S294.7 0 224 0 96 57.3 96 128s57.3 128 128 128zm89.6 32h-16.7c-22.2 10.2-46.9 16-72.9 16s-50.6-5.8-72.9-16h-16.7C60.2 288 0 348.2 0 422.4V464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48v-41.6c0-74.2-60.2-134.4-134.4-134.4z"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/components/AuthModal.tsx",
-                                                        lineNumber: 152,
+                                                        lineNumber: 203,
                                                         columnNumber: 25
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/AuthModal.tsx",
-                                                    lineNumber: 151,
+                                                    lineNumber: 194,
                                                     columnNumber: 23
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/AuthModal.tsx",
-                                                lineNumber: 150,
+                                                lineNumber: 193,
                                                 columnNumber: 21
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                 children: "Login with Google"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/AuthModal.tsx",
-                                                lineNumber: 155,
+                                                lineNumber: 206,
                                                 columnNumber: 21
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/components/AuthModal.tsx",
-                                        lineNumber: 146,
+                                        lineNumber: 189,
                                         columnNumber: 19
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -310,18 +314,18 @@ function AuthModal() {
                                             children: "or"
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/AuthModal.tsx",
-                                            lineNumber: 159,
+                                            lineNumber: 210,
                                             columnNumber: 21
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/AuthModal.tsx",
-                                        lineNumber: 158,
+                                        lineNumber: 209,
                                         columnNumber: 19
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/AuthModal.tsx",
-                                lineNumber: 131,
+                                lineNumber: 172,
                                 columnNumber: 17
                             }, this),
                             viewMode !== "FORGOT" ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("form", {
@@ -337,7 +341,7 @@ function AuthModal() {
                                         required: true
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/AuthModal.tsx",
-                                        lineNumber: 166,
+                                        lineNumber: 222,
                                         columnNumber: 19
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -349,7 +353,7 @@ function AuthModal() {
                                         required: true
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/AuthModal.tsx",
-                                        lineNumber: 174,
+                                        lineNumber: 230,
                                         columnNumber: 19
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -358,18 +362,18 @@ function AuthModal() {
                                             children: viewMode === "LOGIN" ? "Login" : "Register"
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/AuthModal.tsx",
-                                            lineNumber: 183,
+                                            lineNumber: 239,
                                             columnNumber: 21
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/AuthModal.tsx",
-                                        lineNumber: 182,
+                                        lineNumber: 238,
                                         columnNumber: 19
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/AuthModal.tsx",
-                                lineNumber: 165,
+                                lineNumber: 218,
                                 columnNumber: 17
                             }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("form", {
                                 onSubmit: handleForgotPassword,
@@ -384,7 +388,7 @@ function AuthModal() {
                                         required: true
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/AuthModal.tsx",
-                                        lineNumber: 188,
+                                        lineNumber: 247,
                                         columnNumber: 19
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -393,18 +397,18 @@ function AuthModal() {
                                             children: "Send Reset Link"
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/AuthModal.tsx",
-                                            lineNumber: 197,
+                                            lineNumber: 256,
                                             columnNumber: 21
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/AuthModal.tsx",
-                                        lineNumber: 196,
+                                        lineNumber: 255,
                                         columnNumber: 19
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/AuthModal.tsx",
-                                lineNumber: 187,
+                                lineNumber: 243,
                                 columnNumber: 17
                             }, this),
                             viewMode === "LOGIN" && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -413,7 +417,7 @@ function AuthModal() {
                                 children: "Forgot your password?"
                             }, void 0, false, {
                                 fileName: "[project]/src/components/AuthModal.tsx",
-                                lineNumber: 203,
+                                lineNumber: 262,
                                 columnNumber: 17
                             }, this),
                             viewMode === "FORGOT" ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -422,7 +426,7 @@ function AuthModal() {
                                 children: "Back to Login"
                             }, void 0, false, {
                                 fileName: "[project]/src/components/AuthModal.tsx",
-                                lineNumber: 212,
+                                lineNumber: 271,
                                 columnNumber: 17
                             }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                                 className: "auth__switch--btn text-center text-sm text-brand-dark font-medium mt-4 cursor-pointer hover:underline w-full",
@@ -430,29 +434,29 @@ function AuthModal() {
                                 children: viewMode === "LOGIN" ? "Don't have an account?" : "Already have an account? Login"
                             }, void 0, false, {
                                 fileName: "[project]/src/components/AuthModal.tsx",
-                                lineNumber: 219,
+                                lineNumber: 278,
                                 columnNumber: 17
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/AuthModal.tsx",
-                        lineNumber: 120,
+                        lineNumber: 153,
                         columnNumber: 13
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/src/components/AuthModal.tsx",
-                    lineNumber: 105,
+                    lineNumber: 138,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/src/components/AuthModal.tsx",
-            lineNumber: 94,
+            lineNumber: 117,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/src/components/AuthModal.tsx",
-        lineNumber: 93,
+        lineNumber: 116,
         columnNumber: 5
     }, this);
 }
@@ -584,6 +588,8 @@ if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelper
 __turbopack_context__.s([
     "auth",
     ()=>auth,
+    "db",
+    ()=>db,
     "googleProvider",
     ()=>googleProvider
 ]);
@@ -599,20 +605,24 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$firebase$2
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$firebase$2f$auth$2f$dist$2f$esm$2f$index$2d$Bz2J43nW$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__ak__as__signOut$3e$__ = __turbopack_context__.i("[project]/node_modules/@firebase/auth/dist/esm/index-Bz2J43nW.js [app-client] (ecmascript) <export ak as signOut>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$firebase$2f$auth$2f$dist$2f$esm$2f$index$2d$Bz2J43nW$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__a9__as__sendPasswordResetEmail$3e$__ = __turbopack_context__.i("[project]/node_modules/@firebase/auth/dist/esm/index-Bz2J43nW.js [app-client] (ecmascript) <export a9 as sendPasswordResetEmail>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$firebase$2f$auth$2f$dist$2f$esm$2f$index$2d$Bz2J43nW$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__ac__as__signInAnonymously$3e$__ = __turbopack_context__.i("[project]/node_modules/@firebase/auth/dist/esm/index-Bz2J43nW.js [app-client] (ecmascript) <export ac as signInAnonymously>");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$firebase$2f$firestore$2f$dist$2f$esm$2f$index$2e$esm$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$locals$3e$__ = __turbopack_context__.i("[project]/node_modules/firebase/firestore/dist/esm/index.esm.js [app-client] (ecmascript) <locals>");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$firebase$2f$firestore$2f$dist$2f$common$2d$aOCKfaeU$2e$esm$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__b0__as__getFirestore$3e$__ = __turbopack_context__.i("[project]/node_modules/@firebase/firestore/dist/common-aOCKfaeU.esm.js [app-client] (ecmascript) <export b0 as getFirestore>");
+;
 ;
 ;
 const firebaseConfig = {
-    apiKey: ("TURBOPACK compile-time value", "AIzaSyCR32ufs4--weERBX7qL6yWR2vzkvfNFmQ"),
-    authDomain: ("TURBOPACK compile-time value", "summarist-9bb06.firebaseapp.com"),
-    projectId: ("TURBOPACK compile-time value", "summarist-9bb06"),
-    storageBucket: ("TURBOPACK compile-time value", "summarist-9bb06.firebasestorage.app"),
-    messagingSenderId: ("TURBOPACK compile-time value", "252010049409"),
-    appId: ("TURBOPACK compile-time value", "1:252010049409:web:d5de82055acab7b5a98280")
+    apiKey: ("TURBOPACK compile-time value", "AIzaSyCR32ufs4--weERBX7qL6yWR2vzkvfNFmQ") || "",
+    authDomain: ("TURBOPACK compile-time value", "summarist-9bb06.firebaseapp.com") || "",
+    projectId: ("TURBOPACK compile-time value", "summarist-9bb06") || "",
+    storageBucket: ("TURBOPACK compile-time value", "summarist-9bb06.firebasestorage.app") || "",
+    messagingSenderId: ("TURBOPACK compile-time value", "252010049409") || "",
+    appId: ("TURBOPACK compile-time value", "1:252010049409:web:d5de82055acab7b5a98280") || ""
 };
 // Initialize Firebase safely for Next.js SSR
 const app = !(0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$firebase$2f$app$2f$dist$2f$esm$2f$index$2e$esm$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$locals$3e$__["getApps"])().length ? (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$firebase$2f$app$2f$dist$2f$esm$2f$index$2e$esm$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$locals$3e$__["initializeApp"])(firebaseConfig) : (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$firebase$2f$app$2f$dist$2f$esm$2f$index$2e$esm$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$locals$3e$__["getApp"])();
 const auth = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$firebase$2f$auth$2f$dist$2f$esm$2f$index$2d$Bz2J43nW$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__D__as__getAuth$3e$__["getAuth"])(app);
 const googleProvider = new __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$firebase$2f$auth$2f$dist$2f$esm$2f$index$2d$Bz2J43nW$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__f__as__GoogleAuthProvider$3e$__["GoogleAuthProvider"]();
+const db = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$firebase$2f$firestore$2f$dist$2f$common$2d$aOCKfaeU$2e$esm$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__b0__as__getFirestore$3e$__["getFirestore"])(app);
 ;
 if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
     __turbopack_context__.k.registerExports(__turbopack_context__.m, globalThis.$RefreshHelpers$);
