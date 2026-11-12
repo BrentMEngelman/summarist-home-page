@@ -2,7 +2,7 @@
 
 import { useEffect, useState, useRef } from "react";
 import { useParams, useRouter } from "next/navigation";
-import { getBookById, Book } from "@/services/api";
+import { getBookById, type Book } from "@/services/api";
 import { AiFillHome, AiFillAudio } from "react-icons/ai";
 import { BsBookmark } from "react-icons/bs";
 import { BiEdit } from "react-icons/bi";

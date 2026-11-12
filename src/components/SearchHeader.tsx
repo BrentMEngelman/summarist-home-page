@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef } from "react";
 import { useRouter } from "next/navigation";
-import { searchBooks, Book } from "@/services/api";
+import { searchBooks, type Book } from "@/services/api";
 import { AiOutlineSearch, AiOutlineClose, AiFillAudio } from "react-icons/ai";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { BiTime } from "react-icons/bi";

@@ -7,16 +7,16 @@ export default function Reviews() {
   const dispatch = useAppDispatch(); // Initialize dispatch here
   return (
     <section id="reviews" className="py-10 w-full">
-      <div className="max-w-[1070px] w-full mx-auto px-6">
+      <div className="max-w-267.5 w-full mx-auto px-6">
         <div>
           <div className="text-[32px] max-md:text-[24px] text-brand-dark text-center mb-8 font-bold">
             What our members say
           </div>
-          <div className="max-w-[600px] mx-auto">
-            <div className="bg-brand-yellow p-4 mb-8 rounded-[4px] font-light">
+          <div className="max-w-150 mx-auto">
+            <div className="bg-brand-yellow p-4 mb-8 rounded-sm font-light">
               <div className="text-brand-dark flex gap-2 mb-2">
                 <div className="font-bold">Hanna M.</div>
-                <div className="flex [&>svg]:w-[16px] [&>svg]:h-[16px] [&>svg]:fill-brand-blue-accent">
+                <div className="flex [&>svg]:w-4 [&>svg]:h-4 [&>svg]:fill-brand-blue-accent">
                   <BsStarFill />
                 </div>
               </div>
@@ -26,10 +26,10 @@ export default function Reviews() {
                 Highly recommend it to all book lovers.
               </div>
             </div>
-            <div className="bg-brand-yellow p-4 mb-8 rounded-[4px] font-light">
+            <div className="bg-brand-yellow p-4 mb-8 rounded-sm font-light">
               <div className="text-brand-dark flex gap-2 mb-2">
                 <div className="font-bold">David B.</div>
-                <div className="flex [&>svg]:w-[16px] [&>svg]:h-[16px] [&>svg]:fill-brand-blue-accent">
+                <div className="flex [&>svg]:w-4 [&>svg]:h-4 [&>svg]:fill-brand-blue-accent">
                   <BsStarFill />
                 </div>
               </div>
@@ -40,10 +40,10 @@ export default function Reviews() {
                 intuitive.
               </div>
             </div>
-            <div className="bg-brand-yellow p-4 mb-8 rounded-[4px] font-light">
+            <div className="bg-brand-yellow p-4 mb-8 rounded-sm font-light">
               <div className="text-brand-dark flex gap-2 mb-2">
                 <div className="font-bold">Nathan S.</div>
-                <div className="flex [&>svg]:w-[16px] [&>svg]:h-[16px] [&>svg]:fill-brand-blue-accent">
+                <div className="flex [&>svg]:w-4 [&>svg]:h-4 [&>svg]:fill-brand-blue-accent">
                   <BsStarFill />
                 </div>
               </div>
@@ -54,27 +54,29 @@ export default function Reviews() {
                 Definitely worth downloading.
               </div>
             </div>
-            <div className="bg-brand-yellow p-4 mb-8 rounded-[4px] font-light">
+            <div className="bg-brand-yellow p-4 mb-8 rounded-sm font-light">
               <div className="text-brand-dark flex gap-2 mb-2">
                 <div className="font-bold">Ryan R.</div>
-                <div className="flex [&>svg]:w-[16px] [&>svg]:h-[16px] [&>svg]:fill-brand-blue-accent">
+                <div className="flex [&>svg]:w-4 [&>svg]:h-4 [&>svg]:fill-brand-blue-accent">
                   <BsStarFill />
                 </div>
               </div>
               <div className="text-brand-text tracking-[0.3px] leading-[1.4] max-md:text-[14px]">
                 If you&apos;re a busy person who{" "}
-                <b>loves reading but doesn&apos;t have the time</b> to read every
-                book in full, this app is for you! The summaries are thorough
-                and provide a great overview of the book&apos;s content.
+                <b>loves reading but doesn&apos;t have the time</b> to read
+                every book in full, this app is for you! The summaries are
+                thorough and provide a great overview of the book&apos;s
+                content.
               </div>
             </div>
           </div>
           <div className="flex justify-center">
-            <button className="bg-brand-primary hover:bg-brand-primary-hover active:translate-y-[1px] text-brand-dark w-full h-[40px] rounded-[4px] text-[16px] transition-colors duration-200 flex items-center justify-center min-w-[180px] max-w-[300px]"
-            onClick={() => {
-                          dispatch(setViewMode("LOGIN"));
-                          dispatch(setAuthModalOpen(true));
-                        }}
+            <button
+              className="bg-brand-primary hover:bg-brand-primary-hover active:translate-y-px text-brand-dark w-full h-10 rounded-sm text-4 transition-colors duration-200 flex items-center justify-center min-w-45 max-w-75"
+              onClick={() => {
+                dispatch(setViewMode("LOGIN"));
+                dispatch(setAuthModalOpen(true));
+              }}
             >
               Login
             </button>

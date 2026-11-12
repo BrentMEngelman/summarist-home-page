@@ -5,7 +5,7 @@ import { useRouter } from "next/navigation";
 import {
   getSelectedBook,
   getRecommendedBooks,
-  getSuggestedBooks,
+  getSuggestedBooks, type
   Book,
 } from "@/services/api";
 import { AiOutlineSearch, AiFillHome, AiFillAudio } from "react-icons/ai";

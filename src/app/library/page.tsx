@@ -15,9 +15,8 @@ export default function LibraryPage() {
   const router = useRouter();
   const dispatch = useAppDispatch();
   const { user } = useAppSelector((state) => state.auth);
-  const { savedBooks, finishedBooks, loading, initializedForUser } = useAppSelector(
-    (state) => state.library
-  );
+  const { savedBooks, finishedBooks, loading, initializedForUser } =
+    useAppSelector((state) => state.library);
 
   const currentUserKey = user?.uid ?? "guest";
 
@@ -31,9 +30,9 @@ export default function LibraryPage() {
   return (
     <div className="flex min-h-screen bg-white">
       <Sidebar />
-      <main className="flex-1 md:ml-[200px]">
+      <main className="flex-1 md:ml-50">
         <SearchHeader />
-        <div className="max-w-[1070px] mx-auto p-6 md:p-12 space-y-12">
+        <div className="max-w-267.5 mx-auto p-6 md:p-12 space-y-12">
           <div className="flex justify-between items-center">
             <h1 className="text-3xl font-bold text-brand-dark">My Library</h1>
             {!user && (
@@ -47,7 +46,7 @@ export default function LibraryPage() {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               {[...Array(4)].map((_, i) => (
                 <div key={i} className="space-y-3 animate-pulse">
-                  <div className="bg-gray-200 h-[240px] rounded"></div>
+                  <div className="bg-gray-200 h-60 rounded"></div>
                   <div className="bg-gray-200 h-4 w-full rounded"></div>
                   <div className="bg-gray-200 h-3 w-3/4 rounded"></div>
                 </div>
@@ -63,7 +62,8 @@ export default function LibraryPage() {
                 </h2>
                 {savedBooks.length === 0 ? (
                   <p className="text-sm text-brand-muted">
-                    No saved books yet. Browse titles and click "Add to My Library".
+                    No saved books yet. Browse titles and click "Add to My
+                    Library".
                   </p>
                 ) : (
                   <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
@@ -76,12 +76,14 @@ export default function LibraryPage() {
                         <img
                           src={book.imageLink}
                           alt={book.title}
-                          className="w-full h-[240px] object-cover rounded shadow group-hover:scale-105 transition-transform"
+                          className="w-full h-60 object-cover rounded shadow group-hover:scale-105 transition-transform"
                         />
                         <h4 className="font-bold text-sm text-brand-dark line-clamp-1">
                           {book.title}
                         </h4>
-                        <p className="text-xs text-brand-muted">{book.author}</p>
+                        <p className="text-xs text-brand-muted">
+                          {book.author}
+                        </p>
                         <div className="flex items-center gap-1 text-xs text-brand-muted">
                           <BsStarFill className="text-yellow-400 text-xs" />{" "}
                           {book.averageRating}
@@ -100,7 +102,8 @@ export default function LibraryPage() {
                 </h2>
                 {finishedBooks.length === 0 ? (
                   <p className="text-sm text-brand-muted">
-                    No finished books yet. Complete an audio summary to see it here.
+                    No finished books yet. Complete an audio summary to see it
+                    here.
                   </p>
                 ) : (
                   <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
@@ -113,12 +116,14 @@ export default function LibraryPage() {
                         <img
                           src={book.imageLink}
                           alt={book.title}
-                          className="w-full h-[240px] object-cover rounded shadow group-hover:scale-105 transition-transform"
+                          className="w-full h-60 object-cover rounded shadow group-hover:scale-105 transition-transform"
                         />
                         <h4 className="font-bold text-sm text-brand-dark line-clamp-1">
                           {book.title}
                         </h4>
-                        <p className="text-xs text-brand-muted">{book.author}</p>
+                        <p className="text-xs text-brand-muted">
+                          {book.author}
+                        </p>
                         <div className="flex items-center gap-1 text-xs text-brand-muted">
                           <BsStarFill className="text-yellow-400 text-xs" />{" "}
                           {book.averageRating}

@@ -3,7 +3,12 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { useAppSelector, useAppDispatch } from "../store/hooks";
-import { setAuthModalOpen, setViewMode, setUser, type UserData } from "../store/authSlice";
+import {
+  setAuthModalOpen,
+  setViewMode,
+  setUser,
+  type UserData,
+} from "../store/authSlice";
 import {
   auth,
   googleProvider,
@@ -20,7 +25,7 @@ export default function AuthModal() {
   const router = useRouter();
   const dispatch = useAppDispatch();
   const { isAuthModalOpen, viewMode, user } = useAppSelector(
-    (state) => state.auth
+    (state) => state.auth,
   );
 
   const [email, setEmail] = useState("");
@@ -144,7 +149,7 @@ export default function AuthModal() {
               <p className="text-brand-muted mb-6">You are logged in.</p>
               <button
                 onClick={handleLogout}
-                className="btn bg-red-500 hover:bg-red-600 text-white w-full h-[40px] rounded-[4px] font-medium flex items-center justify-center transition-colors"
+                className="btn bg-red-500 hover:bg-red-600 text-white w-full h-10 rounded-sm font-medium flex items-center justify-center transition-colors"
               >
                 Logout
               </button>
@@ -172,7 +177,7 @@ export default function AuthModal() {
                 <>
                   <button
                     onClick={handleGuestLogin}
-                    className="btn guest__btn--wrapper bg-[#3a579d] hover:bg-[#324b87] text-white w-full h-[40px] rounded-[4px] text-[16px] flex items-center justify-center gap-3 mb-4 transition-colors"
+                    className="btn guest__btn--wrapper bg-[#3a579d] hover:bg-[#324b87] text-white w-full h-10 rounded-sm text-4 flex items-center justify-center gap-3 mb-4 transition-colors"
                   >
                     <figure className="google__icon--mask guest__icon--mask flex items-center">
                       <FaUser />
@@ -188,7 +193,7 @@ export default function AuthModal() {
 
                   <button
                     onClick={handleGoogleLogin}
-                    className="btn google__btn--wrapper bg-[#4285f4] hover:bg-[#357ae8] text-white w-full h-[40px] rounded-[4px] text-[16px] flex items-center justify-center gap-3 mb-6 transition-colors"
+                    className="btn google__btn--wrapper bg-[#4285f4] hover:bg-[#357ae8] text-white w-full h-10 rounded-sm text-4 flex items-center justify-center gap-3 mb-6 transition-colors"
                   >
                     <figure className="google__icon--mask flex items-center">
                       <svg
@@ -220,7 +225,7 @@ export default function AuthModal() {
                   className="auth__main--form space-y-4 mt-6"
                 >
                   <input
-                    className="auth__main--input w-full border border-gray-300 p-3 rounded-[4px] text-sm focus:outline-none focus:border-brand-primary"
+                    className="auth__main--input w-full border border-gray-300 p-3 rounded-sm text-sm focus:outline-none focus:border-brand-primary"
                     type="email"
                     placeholder="Email Address"
                     value={email}
@@ -228,14 +233,14 @@ export default function AuthModal() {
                     required
                   />
                   <input
-                    className="auth__main--input w-full border border-gray-300 p-3 rounded-[4px] text-sm focus:outline-none focus:border-brand-primary"
+                    className="auth__main--input w-full border border-gray-300 p-3 rounded-sm text-sm focus:outline-none focus:border-brand-primary"
                     type="password"
                     placeholder="Password"
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
                     required
                   />
-                  <button className="btn bg-brand-primary hover:bg-brand-primary-hover text-brand-dark w-full h-[40px] rounded-[4px] text-[16px] font-semibold flex items-center justify-center transition-colors">
+                  <button className="btn bg-brand-primary hover:bg-brand-primary-hover text-brand-dark w-full h-10 rounded-sm text-4 font-semibold flex items-center justify-center transition-colors">
                     <span>{viewMode === "LOGIN" ? "Login" : "Register"}</span>
                   </button>
                 </form>
@@ -245,14 +250,14 @@ export default function AuthModal() {
                   className="space-y-4 mt-6"
                 >
                   <input
-                    className="w-full border border-gray-300 p-3 rounded-[4px] text-sm focus:outline-none focus:border-brand-primary"
+                    className="w-full border border-gray-300 p-3 rounded-sm text-sm focus:outline-none focus:border-brand-primary"
                     type="email"
                     placeholder="Enter your registered email"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     required
                   />
-                  <button className="btn bg-brand-primary hover:bg-brand-primary-hover text-brand-dark w-full h-[40px] rounded-[4px] text-[16px] font-semibold flex items-center justify-center transition-colors">
+                  <button className="btn bg-brand-primary hover:bg-brand-primary-hover text-brand-dark w-full h-10 rounded-sm text-4 font-semibold flex items-center justify-center transition-colors">
                     <span>Send Reset Link</span>
                   </button>
                 </form>
@@ -279,7 +284,7 @@ export default function AuthModal() {
                   className="auth__switch--btn text-center text-sm text-brand-dark font-medium mt-4 cursor-pointer hover:underline w-full"
                   onClick={() =>
                     dispatch(
-                      setViewMode(viewMode === "LOGIN" ? "REGISTER" : "LOGIN")
+                      setViewMode(viewMode === "LOGIN" ? "REGISTER" : "LOGIN"),
                     )
                   }
                 >

@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { useParams, useRouter } from "next/navigation";
-import { getBookById, Book } from "@/services/api";
+import { getBookById, type Book } from "@/services/api";
 import { useAppSelector, useAppDispatch } from "@/store/hooks";
 import { setAuthModalOpen } from "@/store/authSlice";
 import { fetchLibrary, toggleSaveBook } from "@/store/librarySlice";
