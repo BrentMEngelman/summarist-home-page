@@ -9,6 +9,7 @@ import { BiEdit } from "react-icons/bi";
 import { FiSettings, FiHelpCircle, FiLogOut } from "react-icons/fi";
 import { RxHamburgerMenu } from "react-icons/rx";
 import SearchHeader from "@/components/SearchHeader";
+import Sidebar from "@/components/Sidebar";
 
 export default function SettingsPage() {
   const router = useRouter();
@@ -18,75 +19,15 @@ export default function SettingsPage() {
   const subscriptionStatus = user?.subscriptionStatus || "basic";
 
   return (
-    <main className="flex-1 md:ml-50">
-      <SearchHeader />
+
+      
       <div className="flex min-h-screen bg-white">
         {/* Sidebar */}
-        <aside className="w-50 border-r border-gray-200 flex flex-col justify-between p-4 min-h-screen fixed top-0 left-0 bg-white z-20 max-md:hidden">
-          <div>
-            <div className="mb-8 px-2">
-              <img
-                src="/assets/logo.png"
-                alt="Summarist Logo"
-                className="w-40"
-              />
-            </div>
-            <nav className="space-y-2">
-              <a
-                href="/for-you"
-                className="flex items-center gap-3 px-3 py-2 text-brand-text hover:bg-gray-50 rounded font-medium"
-              >
-                <AiFillHome className="text-xl" /> For you
-              </a>
-              <a
-                href="/library"
-                className="flex items-center gap-3 px-3 py-2 text-brand-text hover:bg-gray-50 rounded font-medium"
-              >
-                <BsBookmark className="text-xl" /> My Library
-              </a>
-              <div className="flex items-center gap-3 px-3 py-2 text-gray-400 cursor-not-allowed font-medium">
-                <BiEdit className="text-xl" /> Highlights
-              </div>
-              <div className="flex items-center gap-3 px-3 py-2 text-gray-400 cursor-not-allowed font-medium">
-                <AiOutlineSearch className="text-xl" /> Search
-              </div>
-            </nav>
-          </div>
-
-          <div className="space-y-2">
-            <a
-              href="/settings"
-              className="flex items-center gap-3 px-3 py-2 text-brand-dark bg-brand-gray-light rounded font-medium"
-            >
-              <FiSettings className="text-xl text-brand-primary" /> Settings
-            </a>
-            <div className="flex items-center gap-3 px-3 py-2 text-gray-400 cursor-not-allowed font-medium">
-              <FiHelpCircle className="text-xl" /> Help & Support
-            </div>
-            <a
-              href="/"
-              className="flex items-center gap-3 px-3 py-2 text-brand-text hover:bg-gray-50 rounded font-medium cursor-pointer"
-            >
-              <FiLogOut className="text-xl" /> Logout
-            </a>
-          </div>
-        </aside>
+        <Sidebar/>
 
         {/* Main Content */}
         <main className="flex-1 md:ml-50">
-          <header className="border-b border-gray-200 p-4 flex justify-between items-center max-w-267.5 mx-auto sticky top-0 bg-white z-10">
-            <div className="relative max-w-100 w-full">
-              <input
-                type="text"
-                placeholder="Search for books"
-                className="w-full border border-gray-300 rounded px-4 py-2 text-sm focus:outline-none focus:border-brand-primary"
-              />
-              <AiOutlineSearch className="absolute right-3 top-2.5 text-xl text-gray-400" />
-            </div>
-            <button className="md:hidden text-2xl text-brand-dark">
-              <RxHamburgerMenu />
-            </button>
-          </header>
+          <SearchHeader />
 
           <div className="max-w-267.5 mx-auto p-6 md:p-12">
             <h1 className="text-3xl font-bold text-brand-dark border-b border-gray-200 pb-4 mb-8">
@@ -164,6 +105,6 @@ export default function SettingsPage() {
           </div>
         </main>
       </div>
-    </main>
+
   );
 }

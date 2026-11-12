@@ -17,6 +17,8 @@ import {
 } from "react-icons/fi";
 import { RxHamburgerMenu } from "react-icons/rx";
 import SearchHeader from "@/components/SearchHeader";
+import Sidebar from "@/components/Sidebar";
+import { markBookAsFinished } from "@/services/libraryService";
 
 export default function BookPlayerPage() {
   const router = useRouter();
@@ -91,55 +93,7 @@ export default function BookPlayerPage() {
       <SearchHeader />
       <div className="flex min-h-screen bg-white pb-32">
         {/* Sidebar */}
-        <aside className="w-50 border-r border-gray-200 flex flex-col justify-between p-4 min-h-screen fixed top-0 left-0 bg-white z-20 max-md:hidden">
-          <div>
-            <div className="mb-8 px-2">
-              <img
-                src="/assets/logo.png"
-                alt="Summarist Logo"
-                className="w-40"
-              />
-            </div>
-            <nav className="space-y-2">
-              <a
-                href="/for-you"
-                className="flex items-center gap-3 px-3 py-2 text-brand-text hover:bg-gray-50 rounded font-medium"
-              >
-                <AiFillHome className="text-xl" /> For you
-              </a>
-              <a
-                href="/library"
-                className="flex items-center gap-3 px-3 py-2 text-brand-text hover:bg-gray-50 rounded font-medium"
-              >
-                <BsBookmark className="text-xl" /> My Library
-              </a>
-              <div className="flex items-center gap-3 px-3 py-2 text-gray-400 cursor-not-allowed font-medium">
-                <BiEdit className="text-xl" /> Highlights
-              </div>
-              <div className="flex items-center gap-3 px-3 py-2 text-gray-400 cursor-not-allowed font-medium">
-                <AiFillAudio className="text-xl" /> Search
-              </div>
-            </nav>
-          </div>
-
-          <div className="space-y-2">
-            <a
-              href="/settings"
-              className="flex items-center gap-3 px-3 py-2 text-brand-text hover:bg-gray-50 rounded font-medium"
-            >
-              <FiSettings className="text-xl" /> Settings
-            </a>
-            <div className="flex items-center gap-3 px-3 py-2 text-gray-400 cursor-not-allowed font-medium">
-              <FiHelpCircle className="text-xl" /> Help & Support
-            </div>
-            <a
-              href="/"
-              className="flex items-center gap-3 px-3 py-2 text-brand-text hover:bg-gray-50 rounded font-medium cursor-pointer"
-            >
-              <FiLogOut className="text-xl" /> Logout
-            </a>
-          </div>
-        </aside>
+        <Sidebar />
 
         {/* Main Reader Content */}
         <main className="flex-1 md:ml-50 max-w-200 mx-auto p-6 md:p-12">
@@ -224,7 +178,12 @@ export default function BookPlayerPage() {
               src={book?.audioLink}
               onTimeUpdate={handleTimeUpdate}
               onLoadedMetadata={handleLoadedMetadata}
-              onEnded={() => setIsPlaying(false)}
+              onEnded={async () => {
+                setIsPlaying(false);
+                if (user && book) {
+                  await markBookAsFinished(user.uid, book);
+                }
+              }}
             />
 
             <div className="hidden md:block w-37.5"></div>
