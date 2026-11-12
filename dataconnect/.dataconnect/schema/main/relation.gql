@@ -1,0 +1,152 @@
+extend type LibraryItem {
+  """
+  Implicit metadata field that cannot be written. It provides extra information about query results.
+  """
+  _metadata: _Metadata @fdc_generated(from: "LibraryItem", purpose: METADATA_FIELD)
+  """
+  ✨ Count the number of rows in the `LibraryItem` table.
+  """
+  _count: Int! @fdc_generated(from: "LibraryItem.", purpose: QUERY_COUNT)
+  """
+  ✨ Count the number of rows in the `LibraryItem` table where the `addedAt` field is non-null. Pass the `distinct` argument to instead count the number of distinct values.
+  """
+  addedAt_count(
+    """
+    Set to true to count the number of distinct values.
+    """
+    distinct: Boolean = false
+  ): Int! @fdc_generated(from: "LibraryItem.addedAt", purpose: QUERY_COUNT)
+  """
+  ✨ Count the number of rows in the `LibraryItem` table where the `audioLength` field is non-null. Pass the `distinct` argument to instead count the number of distinct values.
+  """
+  audioLength_count(
+    """
+    Set to true to count the number of distinct values.
+    """
+    distinct: Boolean = false
+  ): Int! @fdc_generated(from: "LibraryItem.audioLength", purpose: QUERY_COUNT)
+  """
+  ✨ Count the number of rows in the `LibraryItem` table where the `author` field is non-null. Pass the `distinct` argument to instead count the number of distinct values.
+  """
+  author_count(
+    """
+    Set to true to count the number of distinct values.
+    """
+    distinct: Boolean = false
+  ): Int! @fdc_generated(from: "LibraryItem.author", purpose: QUERY_COUNT)
+  """
+  ✨ Count the number of rows in the `LibraryItem` table where the `bookId` field is non-null. Pass the `distinct` argument to instead count the number of distinct values.
+  """
+  bookId_count(
+    """
+    Set to true to count the number of distinct values.
+    """
+    distinct: Boolean = false
+  ): Int! @fdc_generated(from: "LibraryItem.bookId", purpose: QUERY_COUNT)
+  """
+  ✨ Count the number of rows in the `LibraryItem` table where the `coverImage` field is non-null. Pass the `distinct` argument to instead count the number of distinct values.
+  """
+  coverImage_count(
+    """
+    Set to true to count the number of distinct values.
+    """
+    distinct: Boolean = false
+  ): Int! @fdc_generated(from: "LibraryItem.coverImage", purpose: QUERY_COUNT)
+  """
+  ✨ Count the number of rows in the `LibraryItem` table where the `id` field is non-null. Pass the `distinct` argument to instead count the number of distinct values.
+  """
+  id_count(
+    """
+    Set to true to count the number of distinct values.
+    """
+    distinct: Boolean = false
+  ): Int! @fdc_generated(from: "LibraryItem.id", purpose: QUERY_COUNT)
+  """
+  ✨ Count the number of rows in the `LibraryItem` table where the `status` field is non-null. Pass the `distinct` argument to instead count the number of distinct values.
+  """
+  status_count(
+    """
+    Set to true to count the number of distinct values.
+    """
+    distinct: Boolean = false
+  ): Int! @fdc_generated(from: "LibraryItem.status", purpose: QUERY_COUNT)
+  """
+  ✨ Count the number of rows in the `LibraryItem` table where the `title` field is non-null. Pass the `distinct` argument to instead count the number of distinct values.
+  """
+  title_count(
+    """
+    Set to true to count the number of distinct values.
+    """
+    distinct: Boolean = false
+  ): Int! @fdc_generated(from: "LibraryItem.title", purpose: QUERY_COUNT)
+  """
+  ✨ Count the number of rows in the `LibraryItem` table where the `userId` field is non-null. Pass the `distinct` argument to instead count the number of distinct values.
+  """
+  userId_count(
+    """
+    Set to true to count the number of distinct values.
+    """
+    distinct: Boolean = false
+  ): Int! @fdc_generated(from: "LibraryItem.userId", purpose: QUERY_COUNT)
+  """
+  ✨ Minimum of the `addedAt` field in the `LibraryItem` table.
+  """
+  addedAt_min: Timestamp @fdc_generated(from: "LibraryItem.addedAt", purpose: QUERY_MIN)
+  """
+  ✨ Maximum of the `addedAt` field in the `LibraryItem` table.
+  """
+  addedAt_max: Timestamp @fdc_generated(from: "LibraryItem.addedAt", purpose: QUERY_MAX)
+  """
+  A generated field that is used for caching results in SDKs.
+  """
+  _id: ID! @fdc_generated(from: "LibraryItem.id", purpose: ENTITY_ID)
+}
+extend type User {
+  """
+  Implicit metadata field that cannot be written. It provides extra information about query results.
+  """
+  _metadata: _Metadata @fdc_generated(from: "User", purpose: METADATA_FIELD)
+  """
+  ✨ Count the number of rows in the `User` table.
+  """
+  _count: Int! @fdc_generated(from: "User.", purpose: QUERY_COUNT)
+  """
+  ✨ Count the number of rows in the `User` table where the `createdAt` field is non-null. Pass the `distinct` argument to instead count the number of distinct values.
+  """
+  createdAt_count(
+    """
+    Set to true to count the number of distinct values.
+    """
+    distinct: Boolean = false
+  ): Int! @fdc_generated(from: "User.createdAt", purpose: QUERY_COUNT)
+  """
+  ✨ Count the number of rows in the `User` table where the `email` field is non-null. Pass the `distinct` argument to instead count the number of distinct values.
+  """
+  email_count(
+    """
+    Set to true to count the number of distinct values.
+    """
+    distinct: Boolean = false
+  ): Int! @fdc_generated(from: "User.email", purpose: QUERY_COUNT)
+  """
+  ✨ Count the number of rows in the `User` table where the `id` field is non-null. Pass the `distinct` argument to instead count the number of distinct values.
+  """
+  id_count(
+    """
+    Set to true to count the number of distinct values.
+    """
+    distinct: Boolean = false
+  ): Int! @fdc_generated(from: "User.id", purpose: QUERY_COUNT)
+  """
+  ✨ Minimum of the `createdAt` field in the `User` table.
+  """
+  createdAt_min: Timestamp @fdc_generated(from: "User.createdAt", purpose: QUERY_MIN)
+  """
+  ✨ Maximum of the `createdAt` field in the `User` table.
+  """
+  createdAt_max: Timestamp @fdc_generated(from: "User.createdAt", purpose: QUERY_MAX)
+  """
+  A generated field that is used for caching results in SDKs.
+  """
+  _id: ID! @fdc_generated(from: "User.id", purpose: ENTITY_ID)
+}

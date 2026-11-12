@@ -54,8 +54,8 @@ export default function SearchHeader() {
   };
 
   return (
-    <header className="border-b border-gray-200 p-4 flex justify-between items-center max-w-[1070px] mx-auto sticky top-0 bg-white z-30">
-      <div className="relative max-w-[400px] w-full" ref={dropdownRef}>
+    <header className="border-b border-gray-200 p-4 flex justify-between items-center max-w-267.5 mx-auto sticky top-0 bg-white z-30">
+      <div className="relative max-w-100 w-full" ref={dropdownRef}>
         <div className="relative flex items-center">
           <input
             type="text"
@@ -81,7 +81,7 @@ export default function SearchHeader() {
 
         {/* Debounced Search Dropdown */}
         {isOpen && (
-          <div className="absolute top-full left-0 right-0 bg-white border border-gray-200 rounded-b-lg shadow-xl mt-1 max-h-[380px] overflow-y-auto z-40 divide-y divide-gray-100">
+          <div className="absolute top-full left-0 right-0 bg-white border border-gray-200 rounded-b-lg shadow-xl mt-1 max-h-95 overflow-y-auto z-40 divide-y divide-gray-100">
             {loading ? (
               <div className="p-4 space-y-3">
                 {[...Array(3)].map((_, i) => (

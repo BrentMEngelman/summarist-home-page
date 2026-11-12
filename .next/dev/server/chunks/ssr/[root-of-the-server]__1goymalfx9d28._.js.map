@@ -1,6 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 10, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/brent/Desktop/FES-Projects/summarist-home-page/src/app/page.tsx"],"sourcesContent":["// import Nav from \"@/components/Nav\";\r\n// import Landing from \"@/components/Landing\";\r\n// import Features from \"@/components/Features\";\r\n// import Reviews from \"@/components/Reviews\";\r\n// import Numbers from \"@/components/Numbers\";\r\n// import Footer from \"@/components/Footer\";\r\n\r\n\r\nexport default function Home() {\r\n  return (\r\n    <div className=\"max-w-[100%] overflow-x-hidden font-roboto text-brand-text\">\r\n      <Nav />\r\n      <Landing />\r\n      <Features />\r\n      <Reviews />\r\n      <Numbers />\r\n      <Footer />\r\n    </div>\r\n  );\r\n}\r\n"],"names":["Home","className","Nav","Landing","Features","Reviews","Numbers","Footer"],"mappings":"AAAA,sCAAsC;AACtC,8CAA8C;AAC9C,gDAAgD;AAChD,8CAA8C;AAC9C,8CAA8C;AAC9C,4CAA4C;;;;;;;AAG7B,SAASA;IACtB,qBACE,8OAAC;QAAIC,WAAU;;0BACb,8OAACC;;;;;0BACD,8OAACC;;;;;0BACD,8OAACC;;;;;0BACD,8OAACC;;;;;0BACD,8OAACC;;;;;0BACD,8OAACC;;;;;;;;;;;AAGP"}}]
-}

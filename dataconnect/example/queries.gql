@@ -1,0 +1,40 @@
+# Fetch all library items for a specific user
+query GetUserLibrary($userId: String!) @auth(level: PUBLIC) {
+  libraryItems(where: { userId: { eq: $userId } }) {
+    id
+    bookId
+    title
+    author
+    coverImage
+    audioLength
+    status
+    addedAt
+  }
+}
+
+# Add a new book to the library
+mutation AddBookToLibrary(
+  $id: UUID!
+  $userId: String!
+  $bookId: String!
+  $title: String!
+  $author: String!
+  $coverImage: String!
+  $audioLength: String!
+  $status: String!
+  $addedAt: Timestamp!
+) @auth(level: PUBLIC) {
+  libraryItem_insert(
+    data: {
+      id: $id
+      userId: $userId
+      bookId: $bookId
+      title: $title
+      author: $author
+      coverImage: $coverImage
+      audioLength: $audioLength
+      status: $status
+      addedAt: $addedAt
+    }
+  )
+}

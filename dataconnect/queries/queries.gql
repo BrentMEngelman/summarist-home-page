@@ -1,0 +1,50 @@
+# Fetch all saved/finished books for a specific user
+query GetUserLibrary($userId: String!) {
+  libraryItems(where: { userId: { eq: $userId } }) {
+    bookId
+    title
+    author
+    coverImage
+    audioLength
+    status
+  }
+}
+
+# Add or save a book to the user's library
+mutation AddBookToLibrary(
+  $userId: String!
+  $bookId: String!
+  $title: String!
+  $author: String!
+  $coverImage: String!
+  $audioLength: String!
+  $status: String!
+) {
+  insert_libraryItem(
+    data: {
+      userId: $userId
+      bookId: $bookId
+      title: $title
+      author: $author
+      coverImage: $coverImage
+      audioLength: $audioLength
+      status: $status
+    }
+  ) {
+    id
+    bookId
+    status
+  }
+}
+
+# Remove a book from the user's library
+mutation RemoveBookFromLibrary($userId: String!, $bookId: String!) {
+  delete_libraryItem(
+    where: { 
+      userId: { eq: $userId }, 
+      bookId: { eq: $bookId } 
+    }
+  ) {
+    id
+  }
+}

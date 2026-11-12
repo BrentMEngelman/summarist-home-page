@@ -1,5 +1,0 @@
-(globalThis["TURBOPACK_CHUNK_LISTS"] || (globalThis["TURBOPACK_CHUNK_LISTS"] = [])).push({
-    script: typeof document === "object" ? document.currentScript : undefined,
-    chunks: ["static/chunks/src_app_globals_162hn9oqc8uss.css","static/chunks/node_modules_0gkda11-eoiub._.js","static/chunks/src_store_01yx5giz4ow9p._.js","static/chunks/node_modules_@firebase_auth_dist_esm_11sqx3a1y5ree._.js","static/chunks/node_modules_re2js_build_index_10oziwle7cri1.js","static/chunks/node_modules_@firebase_firestore_dist_common-aOCKfaeU_esm_1b_110wrdcymp.js","static/chunks/node_modules_@firebase_firestore_dist_1t1pdit5ihwbp._.js","static/chunks/node_modules_react-icons_ai_index_mjs_170dgx-2mcqe6._.js","static/chunks/node_modules_react-icons_bs_index_mjs_13s_i7328nbh2._.js","static/chunks/node_modules_react-icons_bi_index_mjs_10yly187r9gy3._.js","static/chunks/node_modules_react-icons_fi_index_mjs_0365wp-jw69lr._.js","static/chunks/node_modules_react-icons_rx_index_mjs_017o7ls191nwa._.js","static/chunks/node_modules_react-icons_lib_11_gx9i3z64vl._.js","static/chunks/node_modules_1h9pz860xqzte._.js","static/chunks/src_0__9iipe8ewed._.js"],
-    source: "entry"
-});

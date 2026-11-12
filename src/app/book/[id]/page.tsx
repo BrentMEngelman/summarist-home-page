@@ -5,20 +5,12 @@ import { useParams, useRouter } from "next/navigation";
 import { getBookById, Book } from "@/services/api";
 import { useAppSelector, useAppDispatch } from "@/store/hooks";
 import { setAuthModalOpen } from "@/store/authSlice";
-import {
-  AiOutlineSearch,
-  AiFillHome,
-  AiFillAudio,
-  AiFillFileText,
-  AiFillStar,
-} from "react-icons/ai";
+import { fetchLibrary, toggleSaveBook } from "@/store/librarySlice";
+import { AiFillAudio, AiFillFileText, AiFillStar } from "react-icons/ai";
 import { BsBookmark, BsBookmarkFill } from "react-icons/bs";
-import { BiEdit, BiTime } from "react-icons/bi";
-import { FiSettings, FiHelpCircle, FiLogOut } from "react-icons/fi";
-import { RxHamburgerMenu } from "react-icons/rx";
+import { BiTime } from "react-icons/bi";
 import SearchHeader from "@/components/SearchHeader";
 import Sidebar from "@/components/Sidebar";
-
 export default function BookDetailsPage() {
   const router = useRouter();
   const params = useParams();
@@ -26,76 +18,88 @@ export default function BookDetailsPage() {
 
   const dispatch = useAppDispatch();
   const { user } = useAppSelector((state) => state.auth);
+  const { savedBooks, initializedForUser } = useAppSelector(
+    (state) => state.library,
+  );
 
   const [book, setBook] = useState<Book | null>(null);
   const [loading, setLoading] = useState(true);
-  const [isSaved, setIsSaved] = useState(false);
 
-  // Subscription status state (mocked or tied to user profile; defaults to false/unsubscribed)
-  // Replace: const isSubscribed = false;
-  // With:
+  const currentUserKey = user?.uid ?? "guest";
+  const isSaved = savedBooks.some((savedBook) => savedBook.id === id);
+
   const isSubscribed =
     user?.subscriptionStatus === "premium" ||
     user?.subscriptionStatus === "premium-plus";
 
   useEffect(() => {
     if (!id) return;
-    async function fetchBook() {
+    async function loadData() {
       setLoading(true);
-      const data = await getBookById(id);
-      setBook(data);
-      setLoading(false);
-    }
-    fetchBook();
-  }, [id]);
-  const handleProtectedAction = (actionType: "read" | "listen" | "save") => {
-    console.log("Current User:", user);
-    console.log("Current Book:", book);
+      try {
+        const bookData = await getBookById(id);
+        setBook(bookData);
 
-    // 1. Auth check
+        if (initializedForUser !== currentUserKey) {
+          await dispatch(fetchLibrary(user?.uid || null));
+        }
+      } catch (error) {
+        console.error("Failed to load book or library status:", error);
+      } finally {
+        setLoading(false);
+      }
+    }
+    loadData();
+  }, [id, user, currentUserKey, initializedForUser, dispatch]);
+
+  const handleProtectedAction = async (
+    actionType: "read" | "listen" | "save",
+  ) => {
+    if (actionType === "save") {
+      if (!book) return;
+      try {
+        await dispatch(
+          toggleSaveBook({
+            id: crypto.randomUUID(),
+            userId: user?.uid || null,
+            bookId: book.id,
+            title: book.title,
+            author: book.author,
+            coverImage: book.imageLink,
+            audioLength: book.audioLength || "5m",
+            status: isSaved ? "removed" : "saved",
+            addedAt: new Date().toISOString(),
+          }),
+        ).unwrap();
+      } catch (error) {
+        console.error("Failed to update library item:", error);
+      }
+      return;
+    }
+
     if (!user) {
-      console.log("User not logged in - opening Auth Modal");
       dispatch(setAuthModalOpen(true));
       return;
     }
 
-    // 2. Save action
-    if (actionType === "save") {
-      setIsSaved(!isSaved);
-      return;
-    }
-
-    // 3. Premium subscription check
     if (book?.subscriptionRequired && !isSubscribed) {
-      console.log(
-        "Premium book & user unsubscribed - navigating to /choose-plan",
-      );
       router.push("/choose-plan");
       return;
     }
 
-    // 4. Player navigation
     if (book?.id) {
-      console.log(`Navigating to /player/${book.id}`);
       router.push(`/player/${book.id}`);
-    } else {
-      console.error("Book object missing or invalid ID:", book);
     }
   };
 
   return (
     <div className="flex min-h-screen bg-white">
-      {/* Sidebar */}
-      <Sidebar/>
-
-      {/* Main Content */}
+      <Sidebar />
       <main className="flex-1 md:ml-50">
-        {/* Header Search */}
         <SearchHeader />
 
         <div className="max-w-267.5 mx-auto p-6">
           {loading ? (
-            /* Skeleton Loading State */
             <div className="grid md:grid-cols-3 gap-8 py-10">
               <div className="space-y-4">
                 <div className="bg-gray-200 animate-pulse h-87.5 w-full rounded"></div>
@@ -109,7 +113,6 @@ export default function BookDetailsPage() {
             </div>
           ) : book ? (
             <div className="py-8 space-y-12">
-              {/* Top Book Overview */}
               <div className="flex flex-col md:flex-row gap-8 border-b border-gray-200 pb-12">
                 <div className="w-full md:w-1/3 flex justify-center">
                   <img
@@ -174,7 +177,6 @@ export default function BookDetailsPage() {
                 </div>
               </div>
 
-              {/* Book Description & Author Info */}
               <div className="grid md:grid-cols-2 gap-12">
                 <div className="space-y-4">
                   <h3 className="text-xl font-bold text-brand-dark">

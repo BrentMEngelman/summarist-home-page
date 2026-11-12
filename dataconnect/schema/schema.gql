@@ -1,0 +1,17 @@
+type User @table {
+  id: String! @col(name: "uid")
+  email: String!
+  createdAt: Timestamp!
+}
+
+type LibraryItem @table(name: "library_items") {
+  id: UUID!
+  userId: String! @col(name: "user_id")
+  bookId: String! @col(name: "book_id")
+  title: String!
+  author: String!
+  coverImage: String!
+  audioLength: String!
+  status: String!
+  addedAt: Timestamp!
+}
