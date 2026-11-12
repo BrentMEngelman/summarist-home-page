@@ -1,1 +1,7 @@
-{}
+{
+  "/api/create-checkout-session/route": "app/api/create-checkout-session/route.js",
+  "/book/[id]/page": "app/book/[id]/page.js",
+  "/choose-plan/page": "app/choose-plan/page.js",
+  "/for-you/page": "app/for-you/page.js",
+  "/page": "app/page.js"
+}

@@ -1,6 +1,10 @@
+"use client";
+import { setAuthModalOpen, setViewMode } from "@/store/authSlice";
+import { useAppDispatch } from "@/store/hooks";
 import { BsStarFill } from "react-icons/bs";
 
 export default function Reviews() {
+  const dispatch = useAppDispatch(); // Initialize dispatch here
   return (
     <section id="reviews" className="py-10 w-full">
       <div className="max-w-[1070px] w-full mx-auto px-6">
@@ -66,7 +70,12 @@ export default function Reviews() {
             </div>
           </div>
           <div className="flex justify-center">
-            <button className="bg-brand-primary hover:bg-brand-primary-hover active:translate-y-[1px] text-brand-dark w-full h-[40px] rounded-[4px] text-[16px] transition-colors duration-200 flex items-center justify-center min-w-[180px] max-w-[300px]">
+            <button className="bg-brand-primary hover:bg-brand-primary-hover active:translate-y-[1px] text-brand-dark w-full h-[40px] rounded-[4px] text-[16px] transition-colors duration-200 flex items-center justify-center min-w-[180px] max-w-[300px]"
+            onClick={() => {
+                          dispatch(setViewMode("LOGIN"));
+                          dispatch(setAuthModalOpen(true));
+                        }}
+            >
               Login
             </button>
           </div>

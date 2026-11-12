@@ -61,7 +61,9 @@ const librarySlice = createSlice({
         const item = action.payload;
         if (item.status === "removed") {
           state.savedBooks = state.savedBooks.filter((b) => b.id !== item.bookId);
+          state.finishedBooks = state.finishedBooks.filter((b) => b.id !== item.bookId);
         } else if (item.status === "saved") {
+          state.finishedBooks = state.finishedBooks.filter((b) => b.id !== item.bookId);
           if (!state.savedBooks.some((b) => b.id === item.bookId)) {
             state.savedBooks.push({
               id: item.bookId,
@@ -73,6 +75,8 @@ const librarySlice = createSlice({
             });
           }
         } else if (item.status === "finished") {
+          // Remove from saved if present, then add to finished
+          state.savedBooks = state.savedBooks.filter((b) => b.id !== item.bookId);
           if (!state.finishedBooks.some((b) => b.id === item.bookId)) {
             state.finishedBooks.push({
               id: item.bookId,

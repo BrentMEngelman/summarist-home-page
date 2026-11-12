@@ -130,7 +130,7 @@ export default function BookDetailsPage() {
                     {book.subTitle}
                   </p>
 
-                  <div className="flex items-center gap-6 text-sm text-brand-muted pt-2">
+                  <div className="flex items-center gap-6 text-sm text-brand-muted pt-2 flex-wrap">
                     <div className="flex items-center gap-1">
                       <AiFillStar className="text-yellow-400 text-lg" />
                       <span className="font-semibold text-brand-dark">
@@ -144,6 +144,10 @@ export default function BookDetailsPage() {
                     </div>
                     <div className="flex items-center gap-1">
                       <BiTime className="text-lg text-brand-blue-accent" />
+                      <span>{book.audioLength || "3m 23s"}</span>
+                    </div>
+                    <div className="flex items-center gap-1">
+                      <AiFillFileText className="text-lg text-brand-blue-accent" />
                       <span>{book.type}</span>
                     </div>
                   </div>
@@ -177,6 +181,16 @@ export default function BookDetailsPage() {
                 </div>
               </div>
 
+              <div className="flex flex-wrap gap-4 me-4">
+                {book.tags.map((tag, index) => (
+                  <div
+                    key={index}
+                    className="bg-amber-50 px-4 h-12 flex items-center cursor-pointer font-medium rounded-sm"
+                  >
+                    {tag}
+                  </div>
+                ))}
+              </div>
               <div className="grid md:grid-cols-2 gap-12">
                 <div className="space-y-4">
                   <h3 className="text-xl font-bold text-brand-dark">

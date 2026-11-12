@@ -19,11 +19,16 @@ import { RxHamburgerMenu } from "react-icons/rx";
 import SearchHeader from "@/components/SearchHeader";
 import Sidebar from "@/components/Sidebar";
 import { markBookAsFinished } from "@/services/libraryService";
+import { useAppDispatch, useAppSelector } from "@/store/hooks";
+import { toggleSaveBook } from "@/store/librarySlice";
 
 export default function BookPlayerPage() {
   const router = useRouter();
   const params = useParams();
   const id = params?.id as string;
+
+  const dispatch = useAppDispatch();
+  const { user } = useAppSelector((state) => state.auth);
 
   const [book, setBook] = useState<Book | null>(null);
   const [loading, setLoading] = useState(true);
@@ -72,6 +77,27 @@ export default function BookPlayerPage() {
     if (audioRef.current) {
       audioRef.current.currentTime = time;
       setCurrentTime(time);
+    }
+  };
+  const handleAudioFinished = async () => {
+    if (!book) return;
+
+    try {
+      await dispatch(
+        toggleSaveBook({
+          id: crypto.randomUUID(),
+          userId: user?.uid || null,
+          bookId: book.id,
+          title: book.title,
+          author: book.author,
+          coverImage: book.imageLink,
+          audioLength: (book as any).audioLength || "5m",
+          status: "finished",
+          addedAt: new Date().toISOString(),
+        }),
+      ).unwrap();
+    } catch (error) {
+      console.error("Failed to mark book as finished:", error);
     }
   };
 
@@ -178,12 +204,7 @@ export default function BookPlayerPage() {
               src={book?.audioLink}
               onTimeUpdate={handleTimeUpdate}
               onLoadedMetadata={handleLoadedMetadata}
-              onEnded={async () => {
-                setIsPlaying(false);
-                if (user && book) {
-                  await markBookAsFinished(user.uid, book);
-                }
-              }}
+              onEnded={handleAudioFinished}
             />
 
             <div className="hidden md:block w-37.5"></div>

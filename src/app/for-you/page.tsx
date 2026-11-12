@@ -60,7 +60,7 @@ export default function ForYouPage() {
             ) : selectedBook ? (
               <div
                 onClick={() => router.push(`/book/${selectedBook.id}`)}
-                className="bg-[#fbefcs] p-6 rounded-lg flex flex-col md:flex-row gap-6 cursor-pointer hover:shadow-md transition-shadow relative"
+                className="bg-amber-50 p-6 rounded-lg flex flex-col md:flex-row gap-6 cursor-pointer hover:shadow-md transition-shadow relative"
               >
                 {selectedBook.subscriptionRequired && (
                   <span className="absolute top-4 right-4 bg-brand-dark text-white text-xs px-2.5 py-1 rounded-full uppercase tracking-wider font-semibold">
@@ -113,7 +113,7 @@ export default function ForYouPage() {
               </div>
             ) : (
               <div className="grid grid-cols-2 md:grid-cols-5 gap-6">
-                {recommendedBooks.map((book) => (
+                {recommendedBooks.slice(0, 5).map((book) => (
                   <div
                     key={book.id}
                     onClick={() => router.push(`/book/${book.id}`)}
@@ -164,7 +164,7 @@ export default function ForYouPage() {
               </div>
             ) : (
               <div className="grid grid-cols-2 md:grid-cols-5 gap-6">
-                {suggestedBooks.map((book) => (
+                {suggestedBooks.slice(0, 5).map((book) => (
                   <div
                     key={book.id}
                     onClick={() => router.push(`/book/${book.id}`)}

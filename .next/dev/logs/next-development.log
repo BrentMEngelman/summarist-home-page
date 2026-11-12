@@ -1,1 +1,2 @@
-{"timestamp":"00:00:01.126","source":"Server","level":"LOG","message":""}
+{"timestamp":"00:00:00.640","source":"Server","level":"LOG","message":""}
+{"timestamp":"00:00:46.171","source":"Server","level":"ERROR","message":"Stripe error: Error: Invalid API Key provided: blank"}

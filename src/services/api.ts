@@ -7,6 +7,7 @@ export interface Book {
   subTitle: string;
   imageLink: string;
   audioLink: string;
+  audioLength?: string; // Add this optional field
   totalRating: number;
   averageRating: number;
   keyIdeas: number;
