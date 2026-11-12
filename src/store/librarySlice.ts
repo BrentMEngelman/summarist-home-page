@@ -1,7 +1,7 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import { getUserLibrary, addLibraryItem, type UserLibrary } from "@/services/libraryService";
 
-interface LibraryState extends UserLibrary {
+export interface LibraryState extends UserLibrary {
   loading: boolean;
   initializedForUser: string | null | undefined;
 }

@@ -12,7 +12,10 @@ export async function getUserLibrarySQL(uid: string): Promise<UserLibrary> {
       `SELECT book_data FROM user_finished_books WHERE user_id = $1`,
       [uid],
     );
-
+    const savedBooks: Book[] = savedRes.rows.map((row: any) => row.book_data);
+    const finishedBooks: Book[] = finishedRes.rows.map(
+      (row: any) => row.book_data,
+    );
     return {
       savedBooks: savedRes.rows.map((row) => row.book_data),
       finishedBooks: finishedRes.rows.map((row) => row.book_data),

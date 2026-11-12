@@ -14,7 +14,7 @@ export async function POST(req: Request) {
     const interval = planType === "yearly" ? "year" : "month";
 
     const session = await stripe.checkout.sessions.create({
-      payment_method_types: ["card"],
+      payment_method_collection: "if_required",
       line_items: [
         {
           price_data: {
@@ -31,8 +31,12 @@ export async function POST(req: Request) {
         },
       ],
       mode: "subscription",
-      subscription_data:
-        planType === "yearly" ? { trial_period_days: 7 } : undefined,
+      // Conditionally spread subscription_data only if it's a yearly plan with a trial
+      ...(planType === "yearly" && {
+        subscription_data: {
+          trial_period_days: 7,
+        },
+      }),
       success_url: `${req.headers.get("origin")}/for-you?success=true`,
       cancel_url: `${req.headers.get("origin")}/choose-plan?canceled=true`,
     });
