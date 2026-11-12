@@ -1,4 +1,4 @@
-import { Providers } from "@/store/providers";
+import { Providers as Provided } from "../store/providers";
 import AuthModal from "@/components/AuthModal";
 import "./globals.css";
 
@@ -10,10 +10,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <Providers>
+        <Provided>
           {children}
           <AuthModal />
-        </Providers>
+        </Provided>
       </body>
     </html>
   );
