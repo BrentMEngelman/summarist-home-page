@@ -2,3 +2,4 @@
 node_modules/
 modules/
 *.env.local
+.env.local
